@@ -25,20 +25,20 @@ describe('Calculator', (): void => {
             calc.pressOne();
             calc.pressTwo();
             calc.pressAdd();
-            calc.pressTwo();
-            calc.pressOne();
+            calc.pressThree();
+            calc.pressFive();
             calc.pressEquals();
-            expect(calc.display()).to.equal('33');
+            expect(calc.display()).to.equal('47');
         });
         it('should know how to multiply numbers', (): void => {
             const calc: Calculator = new Calculator();
-            calc.pressOne();
-            calc.pressTwo();
+            calc.pressSix();
+            calc.pressSeven();
             calc.pressMultiply();
-            calc.pressTwo();
-            calc.pressOne();
+            calc.pressEight();
+            calc.pressNine();
             calc.pressEquals();
-            expect(calc.display()).to.equal('252');
+            expect(calc.display()).to.equal('5963');
         });
         it('should know how to divide numbers', (): void => {
             const calc: Calculator = new Calculator();
@@ -53,11 +53,11 @@ describe('Calculator', (): void => {
         it('should know how to do exponent', (): void => {
             const calc: Calculator = new Calculator();
             calc.pressOne();
-            calc.pressTwo();
+            calc.pressZero();
             calc.pressExponent();
-            calc.pressTwo();
+            calc.pressThree();
             calc.pressEquals();
-            expect(calc.display()).to.equal('144');
+            expect(calc.display()).to.equal('1000');
         });
         it('should know how to do chain operation', (): void => {
             const calc: Calculator = new Calculator();
@@ -65,10 +65,12 @@ describe('Calculator', (): void => {
             calc.pressTwo();
             calc.pressAdd();
             calc.pressTwo();
-            calc.pressAdd();
+            calc.pressSubtract();
             calc.pressFour();
+            calc.pressDecimal();
+            calc.pressTwo();
             calc.pressEquals();
-            expect(calc.display()).to.equal('18');
+            expect(calc.display()).to.equal('9.8');
         });
     });
 });

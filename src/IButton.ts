@@ -1,0 +1,3 @@
+interface IButton {
+    pressKey(): void;
+}

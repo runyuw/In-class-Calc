@@ -24,7 +24,7 @@ describe('Calculator', (): void => {
             const calc: Calculator = new Calculator();
             calc.pressOne();
             calc.pressTwo();
-            calc.pressPlus();
+            calc.pressAdd();
             calc.pressTwo();
             calc.pressOne();
             calc.pressEquals();
@@ -63,9 +63,9 @@ describe('Calculator', (): void => {
             const calc: Calculator = new Calculator();
             calc.pressOne();
             calc.pressTwo();
-            calc.pressPlus();
+            calc.pressAdd();
             calc.pressTwo();
-            calc.pressPlus();
+            calc.pressAdd();
             calc.pressFour();
             calc.pressEquals();
             expect(calc.display()).to.equal('18');

@@ -1,7 +1,11 @@
+import { ClearState } from "./ClearState";
+
 export class Display {
+    private state: IState;
     private displayValue: string;
 
     constructor() {
+        this.state = new ClearState(this);
         this.displayValue = '';
     }
 

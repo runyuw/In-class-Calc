@@ -1,13 +1,13 @@
-import { Display } from "./Display";
-import { Identifiers } from "./RegularExpressions";
-import { OperatorState } from "./OperatorState";
-import { EqualState } from "./EqualsState";
-import { evaluate } from "mathjs";
+import {Display} from './Display';
+import {Identifiers} from './Identifiers';
+import {OperatorState} from './OperatorState';
+import {EqualState} from './EqualsState';
+import {evaluate} from 'mathjs';
 
 export class NumState implements IState {
     private display: Display;
 
-    constructor (display: Display) {
+    constructor(display: Display) {
         this.display = display;
     }
 
@@ -18,7 +18,7 @@ export class NumState implements IState {
         } else if (Identifiers.numbersIdentifier.test(value)) {
             this.display.appendToDisplayValue(value);
             return new NumState(this.display);
-        }  else if (Identifiers.equalsIdentifier.test(value)) {
+        } else if (Identifiers.equalsIdentifier.test(value)) {
             this.display.setDisplay(evaluate(this.display.getDisplay()).toString());
             return new EqualState(this.display);
         }

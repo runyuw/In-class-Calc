@@ -1,4 +1,4 @@
-import { ClearState } from "./ClearState";
+import {ClearState} from './ClearState';
 
 export class Display {
     private state: IState;

@@ -1,12 +1,12 @@
-import { Display } from "./Display";
-import { Identifiers } from "./RegularExpressions";
-import { NumState } from "./NumState";
-import { EqualState } from "./EqualsState";
+import {Display} from './Display';
+import {Identifiers} from './Identifiers';
+import {NumState} from './NumState';
+import {EqualState} from './EqualsState';
 
 export class OperatorState implements IState {
     private display: Display;
 
-    constructor (display: Display) {
+    constructor(display: Display) {
         this.display = display;
     }
 
@@ -18,7 +18,7 @@ export class OperatorState implements IState {
             this.display.appendToDisplayValue(value);
             return new NumState(this.display);
         } else if (Identifiers.equalsIdentifier.test(value)) {
-            throw new Error("cannot use equals cause another operator was inputted");
+            throw new Error('cannot use equals cause another operator was inputted');
         }
     }
 }

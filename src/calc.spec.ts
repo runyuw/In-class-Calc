@@ -1,6 +1,7 @@
-import { Calculator } from './calc';
-import { expect } from 'chai';
-import { evaluate } from 'mathjs';
+import {Calculator} from './calc';
+import {expect} from 'chai';
+import {evaluate} from 'mathjs';
+
 describe('Calculator', (): void => {
     describe('entering numbers', (): void => {
         it('should let you enter 1-digit numbers', (): void => {

@@ -44,8 +44,7 @@ export class Calculator {
         this.multiply = new GenericButton('*', this.calcDisplay);
         this.divide = new GenericButton('/', this.calcDisplay);
         this.exponent = new GenericButton('^', this.calcDisplay);
-
-        this.equals = new EqualsButton(this.calcDisplay);
+        this.equals = new GenericButton('=', this.calcDisplay);
     }
 
     public pressZero(): void {

@@ -20,4 +20,8 @@ export class Display {
     public appendToDisplayValue(value: string): void {
         this.displayValue += value;
     }
+
+    public append(value: string): void {
+        this.state = this.state.process(value);
+    }
 }

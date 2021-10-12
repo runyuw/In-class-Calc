@@ -10,6 +10,6 @@ export class GenericButton implements IButton {
     }
 
     public pressKey(): void {
-        this.display.appendToDisplayValue(this.buttonChar);
+        this.display.append(this.buttonChar);
     }
 }

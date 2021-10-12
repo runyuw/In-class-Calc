@@ -2,6 +2,7 @@ import { string } from "mathjs";
 import { Display } from "./Display";
 import { Identifiers } from "./RegularExpressions";
 import { NumState } from "./NumState";
+import { EqualState } from "./EqualsState";
 
 export class ClearState implements IState {
     private display: Display;
@@ -13,11 +14,11 @@ export class ClearState implements IState {
     public process(value: string): IState {
         if (Identifiers.operatorIdentifier.test(value)) {
             throw new Error("cannot start with an operator");
-        }
-
-        if (Identifiers.numbersIdentifier.test(value)) {
+        } else if (Identifiers.numbersIdentifier.test(value)) {
             this.display.appendToDisplayValue(value);
             return new NumState(this.display);
+        }  else if (Identifiers.equalsIdentifier.test(value)) {
+            return new EqualState(this.display);
         }
     }
 }

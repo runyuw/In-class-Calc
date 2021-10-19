@@ -1,5 +1,6 @@
 import {evaluate} from 'mathjs';
 import {Display} from './Display';
+import {IButton} from "./IButton";
 
 export class EqualsButton implements IButton {
     private display: Display;

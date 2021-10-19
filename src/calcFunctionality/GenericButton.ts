@@ -1,4 +1,5 @@
 import {Display} from './Display';
+import {IButton} from "./IButton";
 
 export class GenericButton implements IButton {
     private readonly buttonChar: string;

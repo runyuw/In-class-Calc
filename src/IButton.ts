@@ -1,3 +1,0 @@
-interface IButton {
-    pressKey(): void;
-}

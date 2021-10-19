@@ -1,9 +1,10 @@
 import {Display} from './Display';
 import {GenericButton} from './GenericButton';
-import {EqualsButton} from './EqualsButton';
+import {IButton} from "./IButton";
 
-export class Calculator {
+export class Calc {
     private readonly calcDisplay: Display;
+
     private readonly one: IButton;
     private readonly two: IButton;
     private readonly three: IButton;
@@ -23,8 +24,8 @@ export class Calculator {
 
     private readonly equals: IButton;
 
-    constructor() {
-        this.calcDisplay = new Display();
+    constructor(setDisplay: any) {
+        this.calcDisplay = new Display(setDisplay);
 
         // If prof sees this:
         // Imagine all these strings are set as constants up above, then referenced.

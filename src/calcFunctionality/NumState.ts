@@ -3,6 +3,8 @@ import {Identifiers} from './Identifiers';
 import {OperatorState} from './OperatorState';
 import {EqualState} from './EqualsState';
 import {evaluate} from 'mathjs';
+import {IState} from "./IState";
+
 
 export class NumState implements IState {
     private display: Display;
@@ -22,5 +24,7 @@ export class NumState implements IState {
             this.display.setDisplay(evaluate(this.display.getDisplay()).toString());
             return new EqualState(this.display);
         }
+
+        return this;
     }
 }

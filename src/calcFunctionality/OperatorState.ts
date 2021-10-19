@@ -1,9 +1,11 @@
 import {Display} from './Display';
 import {Identifiers} from './Identifiers';
-import {OperatorState} from './OperatorState';
 import {NumState} from './NumState';
+import {EqualState} from './EqualsState';
+import {IState} from "./IState";
 
-export class EqualState implements IState {
+
+export class OperatorState implements IState {
     private display: Display;
 
     constructor(display: Display) {
@@ -15,10 +17,13 @@ export class EqualState implements IState {
             this.display.appendToDisplayValue(value);
             return new OperatorState(this.display);
         } else if (Identifiers.numbersIdentifier.test(value)) {
-            this.display.setDisplay(value);
+            this.display.appendToDisplayValue(value);
             return new NumState(this.display);
         } else if (Identifiers.equalsIdentifier.test(value)) {
-            throw new Error('the expression has already been evaluated');
+            throw new Error('cannot use equals cause another operator was inputted');
         }
+
+        return this;
+
     }
 }

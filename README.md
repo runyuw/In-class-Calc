@@ -1,70 +1,46 @@
+# Getting Started with Create React App
 
-# calculator
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Project scaffold for calculator
+## Available Scripts
 
-This is a customized Typescript 3.9 project starter which includes the following features:
-* Webpack bunding
-* Webpack bundle analyzer
-* Unit test with Mocha/Chai/Sinon
-* Coverage report with nyc
-* TSLint Html Report
-* Code Duplicity Html Report (with git integration)
-* Documentation with Typedoc
+In the project directory, you can run:
 
-## Running the code
+### `npm start`
 
-Run *`npm run start`* to execute the code.  
-This command will first build the project using *`npm run build`* (see below).  
-Then, the the generated code will be executed as *`node dist/calculator.js`*.  
-*Note:* Entry point for project is set to index.ts.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Build the code
+### `npm test`
 
-Run *`npm run build`* to build the project with [Webpack](https://webpack.js.org/).  
-The build artifacts will be stored in the `dist/` directory.  
-To execute the code, run *`node dist/calculator.js`*.  
-*Note:* Entry point for project is set to index.ts.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Running unit tests
+### `npm run build`
 
-Run *`npm run mocha`* to execute the unit tests via [Mocha](https://mochajs.org/)/[Chai](https://www.chaijs.com/)/[Sinon](https://sinonjs.org/).  
-Note: CLI output only, no files generated.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Generate Code coverage Report for unit tests
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Run *`npm run test`* to generate unit test coverage report using [nyc](https://github.com/istanbuljs/nyc).  
-Report location: `reports/coverage`.
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Generate Webpack Bundle Analysis Report
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Run *`npm run build:analysis`* to generate Webpack bundle Analysis report using [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer).    
-Report location: `reports/build-analysis`.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Generate TSLint Html Report
+## Learn More
 
-Run *`npm run lint`* to generate a json and html lint report using [TSLint-Html-report](https://www.npmjs.com/package/tslint-html-report).  
-Report location: `reports/tslint-html-report`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-
-## Generate Code-Duplicity Report
-
-Run *`npm run jscpd`* to generate a json and html duplicity report using [JSCPD-Html-report](https://www.npmjs.com/package/jscpd-html-reporter).  
-Report location: `reports/code-duplicity`  
-
-
-## Generate Documentation
-
-Run *`npm run docs`* to generate documentation for the code using [Typedoc](https://typedoc.org/).  
-Information for Params and Returns of functions is generated automatically.  
-Use JSDoc comment format to provide description for functions:
-```Javascript
-  /**
-   * This is the description for my method
-   * */  
-```
-Report location: `documentation`  
+To learn React, check out the [React documentation](https://reactjs.org/).
